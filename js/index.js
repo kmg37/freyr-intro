@@ -22,3 +22,33 @@ for (i = 0; i < 3; i++) {
     skill.innerText = skills[i]
     skillsList.appendChild(skill)
 }
+
+const messageForm = document.querySelector("body > section:nth-child(6) > form")
+    messageForm.addEventListener("submit", function(event){
+        event.preventDefault();
+    
+    const nameResult = event.target.usersName.value
+    const emailResult = event.target.usersEmail.value
+    const messageResult = event.target.usersMessage.value
+        
+    console.log(nameResult, emailResult, messageResult)
+    
+    const messageSection = document.querySelector("#messages")
+    const messageList = document.querySelector("#messages > ul")
+    
+    const newMessage = document.createElement('li')
+        newMessage.innerHTML = `<a href="mailto:${emailResult}">${nameResult}</a> wrote: <span>"${messageResult}" </span>`
+        
+    removeButton = document.createElement('button')
+        removeButton.innerText = 'remove'
+        removeButton.setAttribute('type', 'button')
+
+        newMessage.appendChild(removeButton)
+        messageList.append(newMessage)
+        
+            removeButton.addEventListener("click", function(event){
+                const entry = document.querySelector("#messages > ul > li")
+                    entry.remove(newMessage)
+            })
+document.querySelector("body > section:nth-child(6) > form").reset()
+});
