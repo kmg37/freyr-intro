@@ -47,7 +47,7 @@ const messageForm = document.querySelector("form")
         messageList.append(newMessage)
         
             removeButton.addEventListener("click", function(event){
-                const entry = removeButton.parentNode.parentNode
+                const entry = removeButton.parentNode
                     newMessage.remove(entry)
             })
 messageForm.reset()
