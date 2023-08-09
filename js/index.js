@@ -23,7 +23,7 @@ for (i = 0; i < 3; i++) {
     skillsList.appendChild(skill)
 }
 
-const messageForm = document.querySelector("body > section:nth-child(6) > form")
+const messageForm = document.querySelector("form")
     messageForm.addEventListener("submit", function(event){
         event.preventDefault();
     
@@ -33,22 +33,22 @@ const messageForm = document.querySelector("body > section:nth-child(6) > form")
         
     console.log(nameResult, emailResult, messageResult)
     
-    const messageSection = document.querySelector("#messages")
-    const messageList = document.querySelector("#messages > ul")
+    const messageSection = document.getElementById("messages")
+    const messageList = messageSection.querySelector("#messages > ul")
     
     const newMessage = document.createElement('li')
         newMessage.innerHTML = `<a href="mailto:${emailResult}">${nameResult}</a> wrote: <span>"${messageResult}" </span>`
         
     removeButton = document.createElement('button')
-        removeButton.innerText = 'remove'
+        removeButton.innerText = 'remove' 
         removeButton.setAttribute('type', 'button')
 
         newMessage.appendChild(removeButton)
         messageList.append(newMessage)
         
             removeButton.addEventListener("click", function(event){
-                const entry = document.querySelector("#messages > ul > li")
-                    entry.remove(newMessage)
+                const entry = removeButton.parentNode.parentNode
+                    newMessage.remove(entry)
             })
-document.querySelector("body > section:nth-child(6) > form").reset()
+messageForm.reset()
 });
