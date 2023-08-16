@@ -4,20 +4,23 @@ const footer = document.querySelector("footer")
 
 
 const copyright = document.createElement('p')
-    copyright.innerText = "Kendrick Goedecke " + thisYear
+    copyright.innerHTML = `Kendrick Goedecke ${thisYear} &copy;`
 
 footer.appendChild(copyright)
 
 const skills = [
     "JavaScript",
     "HTML",
-    "Video Production",
+    "CSS",
+    "Photoshop",
+    "Premiere",
+    "VEGAS",
 ]
 
 const skillsSection = document.querySelector("#skills")
-const skillsList = document.querySelector("#skills > ul")
+const skillsList = document.querySelector("#skillsList")
 
-for (i = 0; i < 3; i++) {
+for (i = 0; i < skills.length; i++) {
     const skill = document.createElement('li')
     skill.innerText = skills[i]
     skillsList.appendChild(skill)
@@ -35,6 +38,10 @@ const messageForm = document.querySelector("form")
     
     const messageSection = document.getElementById("messages")
     const messageList = messageSection.querySelector("#messages > ul")
+
+    if (messageSection.style.display === "none") {
+        messageSection.style.display = "block"
+    }
     
     const newMessage = document.createElement('li')
         newMessage.innerHTML = `<a href="mailto:${emailResult}">${nameResult}</a> wrote: <span>"${messageResult}" </span>`
