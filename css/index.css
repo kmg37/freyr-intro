@@ -55,20 +55,19 @@ label {
     font-size: 15px;
 }
 
-input {
+input, textarea {
     background-color: black;
     color: aliceblue;
     border: #8f8f8f 2px inset;
-    padding: 5px 5px;
     margin: 5px;
 }
 
+input {
+    padding: 5px 5px;
+}
+
 textarea {
-    background-color: black;
-    color: aliceblue;
-    border: #8f8f8f 2px inset;
     padding: 10px 12px;
-    margin: 5px;
 }
 
 a:link {
@@ -87,7 +86,7 @@ button {
     margin: 5px;
 }
 
-ul[id=leftMessages] {
+#leftMessages {
     line-height: 2.0;
     padding: 0px 15px;
 }
@@ -100,7 +99,7 @@ button:active {
     box-shadow: inset 0px 0px 10px #ffffff;
 }
 
-footer[id=copyrightSection] {
+#copyrightSection {
     background-image: url(carbonFiber.jpg);
     background-size: cover;
     height: 45px;
