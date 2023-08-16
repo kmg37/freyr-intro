@@ -1,0 +1,125 @@
+@font-face {
+    font-family: custom1;
+    src: url(comforta1.ttf);
+}
+
+:root {
+    color: aliceblue;
+}
+
+body {
+    background-image: url("blackPoly.jpg");
+    background-size: cover;
+    font-family: custom1;
+    overflow-wrap: break-word;
+    hyphens: manual;
+}
+
+h1 {   
+    font-size: 30px;
+    font-weight: 200;
+    padding: 0px 10px;
+}
+
+h2 {   
+    font-size: 20px;
+    font-weight: 150;
+}
+
+#leaveMessage {
+    margin-top: 50px;
+}
+
+section {
+    margin: 5px;
+    padding: 0px 5px;
+}
+
+li {
+    
+    display: block;
+    line-height: 1.5;
+}
+
+#aboutMe {
+    background-image: url("blackHills.jpg");
+    background-size: cover;
+    background-position: center;    
+    border: 3px inset #8f8f8f;
+    margin-top: -5px;
+    padding: 7px 10px;
+}
+
+label {
+    
+    font-size: 15px;
+}
+
+input, textarea {
+    background-color: black;
+    color: aliceblue;
+    border: #8f8f8f 2px inset;
+    margin: 5px;
+}
+
+input {
+    padding: 5px 5px;
+}
+
+textarea {
+    padding: 10px 12px;
+}
+
+a:link {
+    color: aliceblue;
+}
+
+a:hover {
+    color: rgb(92, 87, 244);
+}
+
+button {
+    background-color: black;    
+    color: aliceblue;
+    border: #8f8f8f 2px outset;
+    padding: 5px 8px;
+    margin: 5px;
+}
+
+#leftMessages {
+    line-height: 2.0;
+    padding: 0px 15px;
+}
+
+button:hover {
+    box-shadow: inset 0px 0px 10px #8f8f8f;
+}
+
+button:active {
+    box-shadow: inset 0px 0px 10px #ffffff;
+}
+
+#copyrightSection {
+    background-image: url(carbonFiber.jpg);
+    background-size: cover;
+    height: 45px;
+    width: 300px;
+    word-spacing: 40px;
+    border: 3px inset #8f8f8f;
+    padding: 0px 100px;
+    margin-top: 100px;
+}
+
+@media (max-width: 767px) {
+    body {
+        background-image: url(blackSand.jfif);
+        background-size: cover;
+    }
+}
+
+@media (min-width: 2160px) {
+    body {
+        background-image: url(blackSquares.png);
+        background-size: cover;
+    }
+}
