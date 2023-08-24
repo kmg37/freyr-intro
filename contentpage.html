@@ -19,16 +19,16 @@
                 <li class="menu_item"><a href="#connect">Connect</a></li>
                 <li class="menu_item"><a href="#contact">Contact</a></li>
             </ul>
-            </div>
+        </div>
         </nav>
         <div class ="bodyContent">
         <section id="about">
-            <h2>About:</h2>
+            <h2 class="contentTitle">About:</h2>
             <p id="aboutMe">Growing web developer set on a path to gain as much knowledge and experience as possible. Having practiced with multiple applications of creative software, my goal is to join these disciplines together. With a focus on full-stack web development, I aim to provide a seamless user experience while keeping true to a projects image.</p>
         </section>
 
         <section id="experience">
-            <h2>Experience:</h2>
+            <h2 class="contentTitle">Experience:</h2>
             <ul class="xpList">
                 <li class="col">
                     <span>
@@ -52,23 +52,24 @@
         </section>
 
         <section id="skills">
-            <h2>Skills:</h2>
+            <h2 class="contentTitle">Skills:</h2>
             <ul id="skillsList">
 
             </ul>
         </section>
 
         <section id="connect">
-            <h2>Connect:</h2>
+            <h2 class="contentTitle">Connect:</h2>
             <ul id="connectList">
-                <li class="contacts"><a href="mailto:kloch93@yahoo.com" target="_blank"><img class="connectPic" src="C:\freyr-intro\css\email-icon.png"/></a>Email</li>
-                <li class="contacts"><a href="https://github.com/kmg37" target="_blank"><img class="connectPic" src="C:\freyr-intro\css\github-logo.png"/></a>GitHub</li>
+                <li class="contacts"><a href="mailto:kloch93@yahoo.com" target="_blank"><img class="connectPic" src="./css/email-icon.png"/></a>Email</li>
+                <li class="contacts"><a href="https://github.com/kmg37" target="_blank"><img class="connectPic" src="./css/github-logo.png"/></a>GitHub</li>
             </ul>
         </section>
         
         <section id="contact">
-            <h2 id="leaveMessage">Leave a Message:</h2>
-            <form name="leave_message">
+            <h2 class="contentTitle" id="leaveMessage">Leave a Message:</h2>
+            <div class="inputContainer">
+            <form class="inputForm" name="leave_message">
              <div class="fieldInputs">
                 <label for="usersName">Name</label>          
                 <input type="text" name="usersName" required />           
@@ -77,15 +78,16 @@
                 <label for="usersEmail">Email</label>         
                 <input type="email" name="usersEmail" required />
              </div>  
+            </div>
              <div class="fieldMessage">
                 <label for="usersMessage">Message</label>
-                <textarea name="usersMessage" required></textarea>
+                <textarea name="usersMessage" class="userMessageField" required></textarea>
              </div>
                 <button type="submit">Submit</button>
             </form>
         </section>
         <section id="messages" style="display: none">
-            <h2>Messages:</h2>
+            <h2 class="contentTitle">Messages:</h2>
             <ul id="leftMessages">
 
             </ul>

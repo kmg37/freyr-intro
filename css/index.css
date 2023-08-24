@@ -100,7 +100,7 @@ body {
     flex: 1 1 100%;
 }
 
-.xpList > *, .contacts {
+.xpList > * {
     display: block;
 }
 
@@ -137,7 +137,7 @@ body {
     justify-content: space-between;
 }
 
-h2 {   
+.contentTitle {   
     font-size: 20px;
     font-weight: 700;
     padding-bottom: 20px;
@@ -164,19 +164,39 @@ input, textarea {
 }
 
 input, label {
-    display: flex;
     margin-bottom: .5rem;
-    max-width: 100%;
+}
+
+input {
+    width: 200px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
+.inputForm {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .fieldInputs {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
     margin-right: 1rem;
 }
 
 .fieldMessage {
+    display: flex;
+    flex-direction: column;
     margin-top: 1rem;
+}
+
+.userMessageField {
+    height: 100px;
+    width: 415px;
 }
 
 input:-webkit-autofill,
@@ -252,41 +272,62 @@ button:active {
 
 /* cover page code */
 
-#coverBody {
+#coverPageBody {
     background-image: url(blackWaves.jpg);
+    background-position: center;
+    min-height: 100vh;
+}
+
+.learnMoreSection {
+    margin: 33% auto 0 auto;
 }
 
 .pageLink {
-    font-size: larger;
+    font-size: 45px;
     outline: #a52525;
     outline-style: solid;
+    outline-width: 5px;
+    border-radius: 5px;
     text-align: center;
-    margin-top: 15%;
     padding: 5px;
+    text-shadow: rgb(125, 125, 125) 2px 3px;
     text-decoration: none;
 }
 
 .pageLink:hover {
-    font-weight: bolder;
-    outline-offset: 15px;
+    outline-offset: 5px;
 }
 
-.footerContainer {
-    display: flex;
-    flex-direction: column;
+.coverPageFooter {
     width: 100%;
-    align-items: center;
     bottom: 0;
     position: absolute;
+}
+
+.coverFooterContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#coverFooter {
+    display: flex;
     font-size: medium;
-    text-align: center;
+    margin-left: 1rem;
+}
+
+.coverPicContainer {
+    display: flex;
 }
 
 .coverPic {
     border-radius: 50px;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     padding: 5px;
+    margin-right: 1rem;
 }
 
 /* media queries for responsiveness */
@@ -299,6 +340,14 @@ button:active {
     .headerNav {
         position: sticky;
         top: 0;
+    }
+
+    .fieldInputs, 
+    .fieldMessage,
+    input,
+    .userMessageField {
+        width: 100%;
+        margin: 0;
     }
 }
 
