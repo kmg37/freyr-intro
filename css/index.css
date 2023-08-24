@@ -273,7 +273,7 @@ button:active {
 /* cover page code */
 
 #coverPageBody {
-    background-image: url(blackWaves.jpg);
+    background-image: url("blackWaves.jpg");
     background-position: center;
     min-height: 100vh;
 }
