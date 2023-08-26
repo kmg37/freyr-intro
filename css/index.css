@@ -32,9 +32,8 @@ ul > li {
 }
 
 .title {
-    color: black;   
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 350;
 }
 
 .title > a:visited, .title > a {
@@ -63,7 +62,7 @@ ul > li {
 .menu_item {
     display: inline-block;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 #aboutMe {
@@ -245,6 +244,15 @@ button:active {
 #leftMessages {
     display: block;
     line-height: 2.0;
+}
+
+#leftMessages > li a:link,
+#leftMessages > li a:visited {
+    color: aliceblue;
+}
+
+#leftMessages > li a:hover {
+    color: rgb(125, 125, 125);
 }
 
 #copyrightSection {
