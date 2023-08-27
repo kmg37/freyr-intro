@@ -286,24 +286,38 @@ button:active {
     min-height: 100vh;
 }
 
-.learnMoreSection {
-    margin: 250px auto 0 auto;
+.learnMoreBox {
+    display: flex;
+    border-radius: 8px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(63, 63, 63, 0.5);
+    box-shadow: 0 1px 12px rgb(154, 154, 154);
+    border: 1px solid rgba(22, 22, 22, 0.3);
+    height: 300px;
+    width: 250px;
+    margin: 100px auto 100px auto;
 }
 
-.pageLink {
-    font-size: 45px;
-    outline: #a52525;
-    outline-style: solid;
-    outline-width: 5px;
-    border-radius: 5px;
+#learnMoreSection {
+    color: aliceblue;
+    word-wrap: break-word;
+    margin: 50px 5px 0 5px;
     text-align: center;
-    padding: 5px;
-    text-shadow: rgb(125, 125, 125) 2px 3px;
-    text-decoration: none;
+    line-height: 1.5;
+    text-shadow: 2px 2px #000000;
 }
 
-.pageLink:hover {
-    outline-offset: 5px;
+#continueButton {
+    font-family: custom1;
+    letter-spacing: 3px;
+    background-color: #000000;
+    color: aliceblue;
+    margin-top: 50px;
+    padding: 15px;
+}
+
+#continueButton:hover {
+    box-shadow: inset 0px 0px 5px #8f8f8f;
 }
 
 .coverPageFooter {
@@ -370,5 +384,15 @@ button:active {
 
     .learnMoreSection {
         margin: 700px auto 0 auto;
+    }
+
+    .learnMoreBox {
+        margin-top: 25%;
+    }
+}
+
+@media (min-width: 1046px) {
+    .learnMoreBox {
+        margin-top: 10%;
     }
 }
