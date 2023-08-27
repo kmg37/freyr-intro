@@ -1,72 +1,23 @@
 <!DOCTYPE html>
 <html lang="eng">
     <head>
-        <title>Kendrick's Project</title>
+        <title>Kendrick's Project Cover</title>
         <meta name ="author" content ="Kendrick Goedecke">
         <meta name ="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/index.css"/>
     </head>
-    <body>
-    <div id="page-container">
-      <div id="content-wrap">
-        <h1>Kendrick Goedecke</h1>
-        <section>
-            <h2>About:</h2>
-            <p id="aboutMe">Growing web developer set on a path to gain as much knowledge and experience as possible. Having practiced with multiple applications of creative software, my goal is to join these disciplines together. With a focus on full-stack web development, I aim to provide a seamless user experience while keeping true to a projects image.</p>
-        </section>
-
-        <section>
-            <h2>Experience:</h2>
-            <ul>
-                <li>2018 - Current: Monster Vape - Store and Online Logistics Manager</li>
-                <li>2017 - 2018: Spectrum - Customer Solutions</li>
-                <li>2015 - 2016: Sprint Mobile - Sales Team Lead</li>
-            </ul>
-        </section>
-
-        <section id="skills">
-            <h2>Skills:</h2>
-            <ul id="skillsList">
-
-            </ul>
-        </section>
-
-        <section>
-            <h2>Connect:</h2>
-            <ul id="connectList">
-                <li>Email - kmg3795@yahoo.com</li>
-                <li>GitHub - https://github.com/kmg37</li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2 id="leaveMessage">Leave a Message:</h2>
-            <form name="leave_message">
-                <label for="usersName">Name</label>
-            <br />
-                <input type="text" name="usersName" required />
-            <br />
-                <label for="usersEmail">Email</label>
-            <br />
-                <input type="email" name="usersEmail" required />
-            <br />
-                <label for="usersMessage">Message</label>
-            <br />
-                <textarea name="usersMessage" required></textarea>
-            <br />
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        
-        <section id="messages" style="display: none">
-            <h2>Messages:</h2>
-            <ul id="leftMessages">
-                
-            </ul>
-        </section>
-    </div>
-    <footer id="copyrightSection"></footer>
-<script src="js/index.js"></script>
-     </div>
+    <body id="coverPageBody">
+        <div class="learnMoreSection">
+        <a class="pageLink" href="./contentpage.html">Learn More</a>
+        </div>
     </body>
-</html>
+    <footer class="coverPageFooter" id="poweredBy">
+    <div class="coverFooterContent">
+        <h2 id="coverFooter">Created With:</h2>
+        <div class="coverPicContainer">
+        <img class="coverPic" src="./css/html-logo.png"/>
+        <img class="coverPic" src="./css/js-logo.png"/>
+        <img class="coverPic" src="./css/css-logo.png"/>
+        </div>
+    </div>
+    </footer>

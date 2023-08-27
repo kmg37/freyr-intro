@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: custom1;
     src: url(comforta1.ttf);
@@ -5,60 +11,191 @@
 
 :root {
     color: aliceblue;
-    background-size: cover;
     font-family: custom1;
     overflow-wrap: break-word;
     hyphens: manual;   
 }
 
-body {
-    background-image: url("blackPoly.jpg");
-    background-size: fit-content;
+ul > li {
+    list-style-type: none;
 }
 
-h1 {   
+/* content page code */
+
+.headerNav {
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.title {
     font-size: 30px;
-    font-weight: 200;
-    padding: 0px 10px;
+    font-weight: 350;
 }
 
-h2 {   
-    font-size: 20px;
-    font-weight: 150;
+.title > a:visited, .title > a {
+    color: black;
+    text-decoration: none;
 }
 
-#leaveMessage {
-    margin-top: 50px;
+.navbar {
+    word-spacing: 5px;
 }
 
-section {
-    margin: 25px;
-    padding: 0px 5px;
+.navbar, .title {
+    margin: 0 20px 0 20px;
 }
 
-li {
-    display: block;
-    line-height: 1.5;
+.menu li > a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.menu li > a:hover {
+    color: rgb(125, 125, 125);
+    text-decoration: underline;
+}
+
+.menu_item {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 #aboutMe {
     background-image: url("blackHills.jpg");
     background-position: center;    
     border: 2px inset #8f8f8f;
-    margin-top: -5px;
+    border-radius: 5px;
     padding: 7px 10px;
+    margin-bottom: 10px;
+}
+
+body {
+    background-image: url("blackPoly.jpg");
+    display: flex;
+    flex-direction: column;
+}
+
+.bodyContent {
+    margin: 0px 10% 0px 10%;
+    line-height: 1.5;
+}
+
+.xpList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.xpList > * {
+    background-color: rgb(42, 42, 42);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    flex: 1 1 100%;
+}
+
+.xpList > * {
+    display: block;
+}
+
+.contacts, .connectPic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 10px 10px 0px;
+}
+
+.connectPic {
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+.connectPic:hover {
+    transform: scale(1.1); 
+}
+
+#skillsList > li {
+    outline-style: solid;
+    outline-color: rgb(57, 57, 57);
+    border-radius: 5px;
+    padding: 5px;
+    display: inline-flex;
+    margin: 5px;
+}
+
+.datesWorked {
+    color: #8f8f8f;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentTitle {   
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+#leaveMessage {
+    margin-bottom: 20px ;
+}
+
+section {
+    margin: 50px;
+    padding: 0px 5px;
 }
 
 label {
     font-size: 15px;
-    padding-left: 5px;
 }
 
 input, textarea {
     background-color: black;
     color: aliceblue;
     border: #8f8f8f 2px inset;
-    margin: 5px;
+    border-radius: 5px;
+}
+
+input, label {
+    margin-bottom: .5rem;
+}
+
+input {
+    width: 200px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inputForm {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fieldInputs {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+.fieldMessage {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.userMessageField {
+    height: 100px;
+    width: 415px;
 }
 
 input:-webkit-autofill,
@@ -72,19 +209,16 @@ input:-webkit-autofill {
     -webkit-text-fill-color: aliceblue;
 }
 
-input {
+input, textarea {
     padding: 5px 5px;
 }
 
-textarea {
-    padding: 10px 12px;
-}
-
 button {
-    background-color: black;    
+    background-color: black;
+    border-radius: 5px;
     color: aliceblue;
     padding: 5px 8px;
-    margin: 5px;
+    margin-top: 1rem;
 }
 
 a:link {
@@ -92,7 +226,11 @@ a:link {
 }
 
 a:hover {
-    color: rgb(92, 87, 244);
+    color: rgb(125, 125, 125);
+}
+
+a:visited {
+    color: aliceblue;
 }
 
 button:hover, input:hover, textarea:hover {
@@ -104,19 +242,31 @@ button:active {
 }
 
 #leftMessages {
+    display: block;
     line-height: 2.0;
-    padding: 0px 15px;
+}
+
+#leftMessages > li a:link,
+#leftMessages > li a:visited {
+    color: aliceblue;
+}
+
+#leftMessages > li a:hover {
+    color: rgb(125, 125, 125);
 }
 
 #copyrightSection {
-    background-color: #000000;
-    color: aliceblue;
-    border: 2px inset #8f8f8f;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     word-spacing: 10px;
-    padding-left: 20px;
+    padding: 20px;
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+#copyrightSection:nth-child(2) {
+    text-align: center;
 }
 
 #page-container {
@@ -128,16 +278,97 @@ button:active {
     padding-bottom: 100px;
 }
 
+/* cover page code */
+
+#coverPageBody {
+    background-image: url("blackWaves.jpg");
+    background-position: center;
+    min-height: 100vh;
+}
+
+.learnMoreSection {
+    margin: 250px auto 0 auto;
+}
+
+.pageLink {
+    font-size: 45px;
+    outline: #a52525;
+    outline-style: solid;
+    outline-width: 5px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    text-shadow: rgb(125, 125, 125) 2px 3px;
+    text-decoration: none;
+}
+
+.pageLink:hover {
+    outline-offset: 5px;
+}
+
+.coverPageFooter {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+.coverFooterContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#coverFooter {
+    display: flex;
+    font-size: medium;
+    margin-left: 1rem;
+}
+
+.coverPicContainer {
+    display: flex;
+}
+
+.coverPic {
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    margin-right: 1rem;
+}
+
+/* media queries for responsiveness */
+
 @media (max-width: 767px) {
-    body {
-        background-image: url(blackSand.jfif);
-        background-size: cover;
+    .bodyContent {
+        margin: 0px;
+    }
+
+    .headerNav {
+        position: sticky;
+        top: 0;
+    }
+
+    .fieldInputs, 
+    .fieldMessage,
+    input,
+    .userMessageField {
+        width: 100%;
+        margin: 0;
     }
 }
 
 @media (min-width: 2160px) {
-    body {
-        background-image: url(blackSquares.png);
-        background-size: cover;
+    .bodyContent {
+        margin: 0 600px 0 600px;
+    }
+
+    .navbar, .title {
+        margin: 0 15% 0 15%
+    }
+
+    .learnMoreSection {
+        margin: 700px auto 0 auto;
     }
 }
