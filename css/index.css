@@ -328,20 +328,22 @@ button:active {
 
 .coverFooterContent {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #coverFooter {
     display: flex;
     font-size: medium;
-    margin-left: 1rem;
+    
 }
 
 .coverPicContainer {
+    width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .coverPic {
@@ -349,7 +351,7 @@ button:active {
     height: 40px;
     width: 40px;
     padding: 5px;
-    margin-right: 1rem;
+    margin: 1rem 1rem 0 1rem;
 }
 
 /* media queries for responsiveness */
