@@ -72,7 +72,7 @@ const projectList = projectSection.querySelector('#projects > ul');
 
 for (i = 0; i < repositories.length; i++) {
     const project = document.createElement('li');
-        project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`;
+        project.innerHTML = `<a href="${repositories[i].html_url}" target="_blank">${repositories[i].name}</a>`;
             projectList.appendChild(project);
     }
 })
