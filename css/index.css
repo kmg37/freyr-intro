@@ -92,15 +92,12 @@ body {
 }
 
 .xpList > * {
+    display: block;
     background-color: rgb(42, 42, 42);
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
     flex: 1 1 100%;
-}
-
-.xpList > * {
-    display: block;
 }
 
 .contacts, .connectPic {
@@ -127,6 +124,19 @@ body {
     padding: 5px;
     display: inline-flex;
     margin: 5px;
+}
+
+#projectList > li {
+   margin: 0 0px 10px 5px;
+}
+
+#projectList > li a {
+    text-decoration: none;
+}
+
+#projectList > li a:hover {
+    color: rgb(125, 125, 125);
+    text-decoration: underline;
 }
 
 .datesWorked {
@@ -357,6 +367,11 @@ button:active {
 /* media queries for responsiveness */
 
 @media (max-width: 767px) {
+
+    body {
+        background-size: cover;
+    }
+
     .bodyContent {
         margin: 0px;
     }
