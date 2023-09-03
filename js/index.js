@@ -58,3 +58,21 @@ const messageForm = document.querySelector("form")
             })
 messageForm.reset()
 });
+
+const githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/kmg37/repos")
+githubRequest.send();
+
+githubRequest.addEventListener("load", function(event) {
+    const repositories = JSON.parse(this.response);
+        console.log(repositories);
+
+const projectSection = document.getElementById('projects');
+const projectList = projectSection.querySelector('#projects > ul');
+
+for (i = 0; i < repositories.length; i++) {
+    const project = document.createElement('li');
+        project.innerHTML = `<a href="${repositories[i].html_url}" target="_blank">${repositories[i].name}</a>`;
+            projectList.appendChild(project);
+    }
+})
