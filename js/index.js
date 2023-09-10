@@ -59,20 +59,16 @@ const messageForm = document.querySelector("form")
 messageForm.reset()
 });
 
-const githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/kmg37/repos")
-githubRequest.send();
-
-githubRequest.addEventListener("load", function(event) {
-    const repositories = JSON.parse(this.response);
-        console.log(repositories);
+fetch ("https://api.github.com/users/kmg37/repos")
+    .then ((res) => res.json())
+    .then ((data) => {
 
 const projectSection = document.getElementById('projects');
 const projectList = projectSection.querySelector('#projects > ul');
 
-for (i = 0; i < repositories.length; i++) {
+for (const repositories of data) {
     const project = document.createElement('li');
-        project.innerHTML = `<a href="${repositories[i].html_url}" target="_blank">${repositories[i].name}</a>`;
+        project.innerHTML = `<a href="${repositories.html_url}" target="_blank">${repositories.name}</a>`;
             projectList.appendChild(project);
-    }
-})
+        }
+    })
