@@ -47,6 +47,7 @@ const messageForm = document.querySelector("form")
     removeButton = document.createElement('button')
         removeButton.innerText = 'remove' 
         removeButton.setAttribute('type', 'button')
+        removeButton.setAttribute('class', 'removeButton')
 
         newMessage.appendChild(removeButton)
         messageList.append(newMessage)
