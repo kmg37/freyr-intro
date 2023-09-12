@@ -6,6 +6,18 @@ const copyright = document.createElement('p')
     copyright.innerHTML = `Kendrick Goedecke ${thisYear} &copy;`
         footer.appendChild(copyright)
 
+const hamburger = document.querySelector('.hamburger')
+const headerList = document.querySelector('.headerList')
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+        headerList.classList.toggle('active');
+})
+    document.querySelectorAll('.headerLink').forEach(n => n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+            headerList.classList.remove('active');
+    }))
+
 const skills = [
     "JavaScript",
     "HTML",

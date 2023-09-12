@@ -25,54 +25,26 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0 5% 0 5%;
-}
-
-.headerPage {
-    box-shadow: 0px 0px 10px 2px black;
-    background-image: linear-gradient(0deg, #00000088 50%, #ffffff44 100%), 
-    url(red-blue-swirl.avif);
-    background-position: center;
-    color: white;
-    text-shadow: black 3px 1px;
 }
 
 .headerNav {
+    color: white;
+    box-shadow: 0px 0px 10px 2px black;
     background-color: rgb(30, 30, 30);
     font-family: 'Staatliches', cursive;
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 15% 5px 15%;
+    padding: 5px 5% 5px 10%;
 }
 
-.headerLanding {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Staatliches', cursive;
-    font-size: 30px;
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 125px;
-    height: 700px;
-}
-
-#landingText {
-    margin-top: 7px;
-    font-size: small;
-}
-
-.headerTitle {
+#headerTitle {
     font-family: 'Permanent Marker', cursive;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    font-size: small;
+    font-size: 30px;
 }
 
 .headerList {
@@ -90,6 +62,44 @@ body {
 
 .headerListItem > a:hover {
     transform: scale(1.1); 
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#headerLanding {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(0deg, #00000088 50%, #ffffff44 100%), 
+    url(red-blue-swirl.avif);
+    background-size: cover;
+    box-shadow: 0px 0px 10px 2px black;
+    color: white;
+    text-shadow: black 3px 1px;
+    font-family: 'Staatliches', cursive;
+    font-size: 30px;
+    padding-bottom: 125px;
+    height: 700px;
+}
+
+#landingDescription {
+    margin-top: 7px;
+    font-size: small;
 }
 
 section {
@@ -127,7 +137,7 @@ section {
     padding: 0 10px 0 10px;
 }
 
-.experienceList {
+#experienceList {
     padding: 10px;
 }
 
@@ -335,43 +345,66 @@ button {
 }
 
 @media (max-width: 600px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
     .headerList {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        left: -100%;
+        top: 47px;
+        background-color: rgb(41, 41, 41);
+        height: 290px;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .headerListItem {
+        margin: 16px 0;
+    }
+
+    .headerList.active {
+        left: 0;
     }
 
     .headerNav {
-        justify-content: center;
-        padding: 10px 0 10px 0;
+        max-height: 3rem;
+        position: fixed;    
     }
 
-    .headerTitle {
-        width: 100%;
-        margin: 0 10% 0 10%;
-    }
-
-    .hamburger, .hamburger::after, .hamburger::before {
-        display: flex;
-        background: none;
-        border: none;
-        color: white;
-        margin: 0;
-    }
-
-    #hamNav {
-        font-size: 30px;
-    }
-}
-
-@media (min-width: 601px) {
-    .hamburger {
+    .topOfPageLink {
         display: none;
-        margin: 0;
+    }
+
+    .connectPic {
+        height: 30px;
+        width: 30px;
+    }
+
+    #copyrightSection {
+        font-size: small;
+        margin-top: 100px;
     }
 }
 
 @media (max-width: 769px) {
 
-    .headerLanding {
+    #headerLanding {
         font-size: 23px;
     }
 
@@ -385,10 +418,6 @@ button {
 
     .fieldInputs {
         margin-top: 10px;
-    }
-
-    #copyrightSection {
-        font-size: small;
     }
 }
 

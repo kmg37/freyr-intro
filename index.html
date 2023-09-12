@@ -5,42 +5,40 @@
         <meta name ="author" content ="Kendrick Goedecke">
         <meta name ="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/index.css"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />    </head>
+    </head>
     <body>
-        <body>
-            <div class="headerPage">
-             <div class="headerNav" id="pageHeader">
-              <div class="headerTitle">
-               <h1>KG</h1>
-                <button class="hamburger"><span class="material-symbols-outlined" id="hamNav">
-                  menu
-                </span>
-                </button>
-              </div>
-                 <div class="headerList">
-                     <ul>
-                         <li class="headerListItem"><a href="#about">About</a></li>
-                         <li class="headerListItem"><a href="#experience">Experience</a></li>
-                         <li class="headerListItem"><a href="#skills">Skills</a></li>
-                         <li class="headerListItem"><a href="#projects">Projects</a></li>
-                         <li class="headerListItem"><a href="#contact">Contact</a></li>
-                     </ul>
-                 </div>
-             </div>
-             <div class="headerLanding">
-               <h2>Kendrick Goedecke</h2>
-               <p>Web Developer</p>
-               <p id="landingText">Portfolio Project</p>
-             </div>
+      <nav class="headerNav" id="pageHeader">
+        <h1 id="headerTitle">KG</h1>
+            <ul class="headerList">
+              <li class="headerListItem">
+                <a href="#about" class="headerLink">About</a></li>
+              <li class="headerListItem">
+                <a href="#experience" class="headerLink">Experience</a></li>
+              <li class="headerListItem">
+                <a href="#skills" class="headerLink">Skills</a></li>
+              <li class="headerListItem">
+                <a href="#projects" class="headerLink">Projects</a></li>
+              <li class="headerListItem">
+                <a href="#contact" class="headerLink">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
             </div>
+      </nav>
+      <div id="headerLanding">
+        <h2 id="landingMyName">Kendrick Goedecke</h2>
+          <p id="landingMyTitle">Web Developer</p>
+            <p id="landingDescription">Portfolio Project</p>
+      </div>
              <section id="about">
                  <h2 class="contentTitle">About</h2>
                  <p id="aboutMe">Growing web developer set on a path to gain as much knowledge and experience as possible. Having practiced with multiple applications of creative software, my goal is to join these disciplines together. With a focus on full-stack web development, I aim to provide a seamless user experience while keeping true to a projects image.</p>
-             </section>
-             <div class="experienceContainer">
+             </section>         
              <section id="experience">
                <h2 class="contentTitle">Experience</h2>
-               <div class="experienceList">
+               <div id="experienceList">
                  <ul>
                    <li class="col">
                      <span>
@@ -66,26 +64,23 @@
                  </ul>
                </div>
              </section>
-             </div>
              <section id="skills">
                <h2 class="contentTitle">Skills</h2>
                <ul id="skillsList">
-         
                </ul>
            </section>
            <section id="projects">
              <h2 class="contentTitle">Projects</h2>
-                 <ul id="projectList">
-         
+                 <ul id="projectList">       
                  </ul>
            </section>
            <section id="contact">
              <h2 class="contentTitle" id="leaveMessage">Leave a Message</h2>
-             <div class="inputContainer">
-             <form class="inputForm" name="leave_message">
-              <div class="fieldInputs">
-                 <label for="usersName">Name</label>          
-                 <input type="text" name="usersName" required />           
+              <div class="inputContainer">
+                <form class="inputForm" name="leave_message">
+                  <div class="fieldInputs">
+                    <label for="usersName">Name</label>          
+                    <input type="text" name="usersName" required />           
               </div>
               <div class="fieldInputs">
                  <label for="usersEmail">Email</label>         
