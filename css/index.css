@@ -21,7 +21,9 @@ ul > li {
 }
 
 body {
-    background-image: linear-gradient(white, rgb(222, 222, 222), white);
+    background-image: url(red-blue-swirl.avif);
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -85,16 +87,33 @@ body {
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(0deg, #00000088 50%, #ffffff44 100%), 
-    url(red-blue-swirl.avif);
-    background-size: cover;
+    background: linear-gradient(-45deg, #a50452, #5e0024, #025f81, #003575);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     box-shadow: 0px 0px 10px 2px black;
     color: white;
-    text-shadow: black 3px 1px;
     font-family: 'Staatliches', cursive;
     font-size: 30px;
     padding-bottom: 125px;
     height: 700px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.avatar {
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
 }
 
 #landingDescription {
@@ -180,6 +199,7 @@ section {
  }
 
 label {
+    color: rgb(0, 0, 0);
     font-size: 15px;
 }
 
@@ -269,9 +289,8 @@ button {
 
 #leftMessages > * {
     display: block;
-    line-height: 1.5;
     width: 100%;
-    padding: 10px;
+    padding-left: 10px;
 }
 
 #leftMessages > li a:link,
@@ -283,7 +302,7 @@ button {
     color: rgb(125, 125, 125);
 }
 
-.topOfPageLink {
+.topOfPageLink, .topOfPageLinkMobile {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -291,11 +310,13 @@ button {
     margin-top: 100px;
 }
 
-.topOfPageLink > a:visited {
-    color: black;
+.topOfPageLink > a:visited, .topOfPageLinkMobile > a:visited {
+    color: rgb(255, 255, 255);
 }
 
 .topOfPageText {
+    background-color: black;
+    color: white;
     outline: solid rgb(0, 96, 125);
     border-radius: 5px;
     padding: 5px;
@@ -398,7 +419,12 @@ button {
 
     #copyrightSection {
         font-size: small;
-        margin-top: 100px;
+    }
+}
+
+@media (min-width: 601px) {
+    .topOfPageLinkMobile {
+        display: none;
     }
 }
 
@@ -418,6 +444,11 @@ button {
 
     .fieldInputs {
         margin-top: 10px;
+    }
+
+    .col {
+        flex-direction: column;
+        align-items: baseline;
     }
 }
 
