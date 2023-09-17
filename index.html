@@ -1,28 +1,112 @@
 <!DOCTYPE html>
 <html lang="eng">
     <head>
-        <title>Kendrick's Project Cover</title>
+        <title>Kendrick's Project</title>
         <meta name ="author" content ="Kendrick Goedecke">
         <meta name ="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/index.css"/>
     </head>
-    <body id="coverPageBody">
-     <div class=learnMoreBox>
-        <section id="learnMoreSection">
-            <p>Thank you for visiting my portfolio project! Click below to learn more.</p>
-                <form action="./contentpage.html">
-                <button type="submit" id="continueButton">continue</button>
-                </form>
-        </section>
-     </div>
+    <body>
+      <nav class="headerNav" id="pageHeader">
+        <h1 id="headerTitle">KG</h1>
+            <ul class="headerList">
+              <li class="headerListItem">
+                <a href="#about" class="headerLink">About</a></li>
+              <li class="headerListItem">
+                <a href="#experience" class="headerLink">Experience</a></li>
+              <li class="headerListItem">
+                <a href="#skills" class="headerLink">Skills</a></li>
+              <li class="headerListItem">
+                <a href="#projects" class="headerLink">Projects</a></li>
+              <li class="headerListItem">
+                <a href="#contact" class="headerLink">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+      </nav>
+      <div id="headerLanding">
+        <img class="avatar" src="./css/AvatarMaker2.png"/>
+        <h2 id="landingMyName">Kendrick Goedecke</h2>
+          <p id="landingMyTitle">Web Developer</p>
+            <p id="landingDescription">Portfolio Project</p>
+      </div>
+             <section id="about">
+                 <h2 class="contentTitle">About</h2>
+                 <p id="aboutMe">Growing web developer set on a path to gain as much knowledge and experience as possible. Having practiced with multiple applications of creative software, my goal is to join these disciplines together. With a focus on full-stack web development, I aim to provide a seamless user experience while keeping true to a projects image.</p>
+             </section>         
+             <section id="experience">
+               <h2 class="contentTitle">Experience</h2>
+               <div id="experienceList">
+                 <ul>
+                   <li class="col">
+                     <span>
+                     <strong>Monster Vape</strong> - Store and Online Logistics Manager 
+                     </span>
+                         <span class="datesWorked"><em>2018 - Present</em></span>
+                   </li>
+                   <p class="experienceDescription">Responsible for logistics between front and back end of business locations via Revel. Also as a point of contact, I coordinate with distributors and independent vendors.</p>
+                   <li class="col">
+                     <span>
+                     <strong>Spectrum</strong> - Customer Solutions 
+                     </span>
+                         <span class="datesWorked"><em>2017 - 2018</em></span>
+                   </li>
+                   <p class="experienceDescription">Was apart of a team that routed on-site technicians to client locations. Worked with proprietary software to determine service areas and potential drop points.</p>
+                   <li class="col">
+                     <span>
+                     <strong>Sprint Mobile</strong> - Tech Specialist 
+                     </span>
+                         <span class="datesWorked"><em>2015 - 2016</em></span>
+                   </li>
+                   <p class="experienceDescription">Dealt primarily with the hardware and software diagnostics of mobile devices. I played a front facing role in a team lead position, aiding with sales and customer accounts.</p>
+                 </ul>
+               </div>
+             </section>
+             <section id="skills">
+               <h2 class="contentTitle">Skills</h2>
+               <ul id="skillsList">
+               </ul>
+           </section>
+           <section id="projects">
+             <h2 class="contentTitle">Projects</h2>
+                 <ul id="projectList">       
+                 </ul>
+           </section>
+           <section id="contact">
+             <h2 class="contentTitle" id="leaveMessage">Leave a Message</h2>
+              <div class="inputContainer">
+                <form class="inputForm" name="leave_message">
+                  <div class="fieldInputs">
+                    <label for="usersName">Name</label>          
+                    <input type="text" name="usersName" required />           
+              </div>
+              <div class="fieldInputs">
+                 <label for="usersEmail">Email</label>         
+                 <input type="email" name="usersEmail" required />
+              </div>  
+             </div>
+              <div class="fieldMessage">
+                 <label for="usersMessage">Message</label>
+                 <textarea name="usersMessage" class="userMessageField" required></textarea>
+              </div>
+                 <button type="submit" class="formButton">Submit</button>
+             </form>
+         </section>
+         <section id="messages" style="display: none">
+             <h2 class="contentTitle">Messages</h2>
+             <ul id="leftMessages">
+         
+             </ul>
+         </section>
+         <p class="topOfPageLinkMobile"><a href="#headerLanding" class="topOfPageText">Top of Page</a></p>
+         <p class="topOfPageLink"><a href="#pageHeader" class="topOfPageText">Top of Page</a></p>
+             <footer id="copyrightSection">
+                 <li class="contacts"><a href="mailto:kloch93@yahoo.com" target="_blank"><img class="connectPic" src="./css/email-icon.png"/></a>Email</li>
+                 <li class="contacts"><a href="https://github.com/kmg37" target="_blank"><img class="connectPic" src="./css/github-logo.png"/></a>GitHub</li>
+             </footer>
+<script src="js/index.js"></script>              
     </body>
-    <footer class="coverPageFooter" id="poweredBy">
-    <div class="coverFooterContent">
-        <h2 id="coverFooter">Created with:</h2>
-        <div class="coverPicContainer">
-        <img class="coverPic" src="./css/html-logo.png"/>
-        <img class="coverPic" src="./css/js-logo.png"/>
-        <img class="coverPic" src="./css/css-logo.png"/>
-        </div>
-    </div>
-    </footer>
+</html>
